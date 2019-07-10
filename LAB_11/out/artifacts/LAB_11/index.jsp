@@ -1,16 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
-  User: adrianomarra
-  Date: 2019-07-06
-  Time: 14:44
+  User: 987109
+  Date: 6/11/2019
+  Time: 2:15 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Support</title>
   </head>
   <body>
-  HOME PAGE
+    <a href='support'>Support servlet app</a>
   </body>
 </html>

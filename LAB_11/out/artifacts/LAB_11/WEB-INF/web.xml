@@ -5,11 +5,16 @@
          version="4.0">
 
     <servlet>
-        <servlet-name>myservlet</servlet-name>
-        <servlet-class>HelloServlet</servlet-class>
+        <servlet-name>Support</servlet-name>
+        <jsp-file>/support.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>myservlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
+        <servlet-name>Support</servlet-name>
+        <url-pattern>/support</url-pattern>
     </servlet-mapping>
+
+    <!--context-param>
+        <param-name>email</param-name>
+        <param-value>cstech@mum.edu</param-value>
+    </context-param-->
 </web-app>
