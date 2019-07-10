@@ -38,10 +38,10 @@ public class Login extends HttpServlet {
                 setCookie("user", user, resp);
             }
             setCookie("promo", "$100", resp);
-            resp.sendRedirect("/LAB_12/welcome");
+            resp.sendRedirect("/welcome");
             return;
         }
-        resp.sendRedirect("/LAB_12");
+        resp.sendRedirect("/");
 
     }
 
