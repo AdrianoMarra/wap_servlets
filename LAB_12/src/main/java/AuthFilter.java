@@ -24,7 +24,6 @@ public class AuthFilter implements Filter {
         } else {
             res.sendRedirect("/LAB_12");
         }
-
     }
 
     @Override
