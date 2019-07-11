@@ -1,0 +1,22 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>
+		2.0
+	</jsp-version>
+	<short-name>My Custom Tags</short-name>
+	<tag>
+		<name>ColorMe</name>
+		<tag-class>com.example.MyTag4</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>foreColor</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>text</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>
