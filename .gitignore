@@ -19,6 +19,7 @@
 *.tar.gz
 *.rar
 *.idea
+*.settings
 target/*
 out/*
 classes/*
