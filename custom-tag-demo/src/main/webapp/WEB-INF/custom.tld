@@ -21,16 +21,16 @@
 	</tag>
 
 	<tag>
-		<name>OtherTag</name>
+		<name>currentDateTime</name>
 		<tag-class>com.example.MyTag5</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
-			<name>foreColor</name>
+			<name>color</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 		<attribute>
-			<name>text</name>
+			<name>size</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>

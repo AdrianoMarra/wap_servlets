@@ -9,6 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<mct:ColorMe text="Please color me." foreColor="red"/>
+	<mct:currentDateTime color="red" size="12px" />
 </body>
 </html>
