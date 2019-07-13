@@ -1,0 +1,44 @@
+.col-xs-5{
+    border: 0px solid gray;
+}
+
+h3{
+    margin-top:0px !important;
+}
+
+.section{
+    padding-bottom:20px;
+}
+
+.description{
+    width: 100%;
+    border-top: 1px solid silver
+}
+.description>p{
+    padding:15px;
+}
+.btnclass>div{
+    display: inline;
+}
+.aside{
+    display: inline-block;
+    margin-left: 5px;
+}
+.aside img{
+    float: left;
+    height: 400px;
+    width: 1000px;
+}
+
+.card-body{
+    font-size: inherit;
+}
+
+#product-img{
+    max-width: 100%;
+}
+
+.product-details {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
