@@ -5,6 +5,7 @@ import com.mongodb.client.MongoDatabase;
 import com.pantanalshop.dao.ProductDAO;
 import com.pantanalshop.model.Product;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -73,7 +74,7 @@ public class ProductController extends HttpServlet {
             List<String[]> items = Arrays.asList();
             setAttributes(items, session);
             dao.removeAllFromCart(con, email);
-            resp.sendRedirect("/checkout?E=10");
+            resp.sendRedirect("/thankyou");
             return;
         }
 
@@ -97,6 +98,8 @@ public class ProductController extends HttpServlet {
             resp.sendRedirect("/checkout?E=0");
             return;
         }
+
+
         resp.sendRedirect("/product?id=" + id + "&E=1");
     }
 

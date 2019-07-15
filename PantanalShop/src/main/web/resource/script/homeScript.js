@@ -1,7 +1,11 @@
 (function(){
     "use strict";
 
-    $(function () {
+    function init() {
+        $(".add-to-card").submit(addToCart);
+    }
+
+
         function parseData(data) {
             $("#appendData").empty();
             for(var i=0; i<data.length;i++){
@@ -60,6 +64,17 @@
             });
         $("#loader").fadeIn(300);
 
-    });
+
+
+    // let addToCart = function() {
+    //     console.log(this);
+    //     $.post('/API/product',
+    //         this.name : this
+    //         , (result) => {
+    //         console.log(result);
+    //     }, "json");
+    // }
+    //
+    // $(init);
 })();
 

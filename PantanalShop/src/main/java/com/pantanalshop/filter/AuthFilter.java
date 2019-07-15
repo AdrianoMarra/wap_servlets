@@ -9,7 +9,7 @@ import java.io.IOException;
 
 @WebFilter(
         filterName = "AuthFilter",
-        urlPatterns = {"/checkout","/logout" },
+        urlPatterns = {"/checkout","/logout","/thankyou"},
         servletNames = { "LoginController","LogoutController" }
 )
 

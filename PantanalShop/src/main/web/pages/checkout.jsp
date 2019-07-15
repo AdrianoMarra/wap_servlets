@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 987109
-  Date: 6/14/2019
-  Time: 2:20 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -84,7 +77,7 @@
                     <div class="col-sm-12 text-center">
                         <form action="/API/product" method="post">
                             <input type="hidden" name="checkout" value="true" />
-                            <input type="submit" id="checkoutbtn" class="btn btn-lg btn-danger" value="Checkout" />
+                            <input type="submit" id="checkoutbtn" class="btn btn-lg btn-success" value="Checkout" />
                         </form>
                     </div>
                 </div>
@@ -119,20 +112,13 @@
 
                         <div class="dropdown-divider"></div>
                         <div class="text-right">
-                            <a href="/checkout" class="btn btn-danger checkoutbtn">Checkout</a>
+                            <a href="/checkout" class="btn btn-success checkoutbtn">Checkout</a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
-</div>
-
-<%--For message--%>
-<div id="msg-success" class="card bg-success text-light custom-msg ${param.E == 10 ? null : "dnone"}">
-    <div class="card-body">
-        <h4><i class="far fa-laugh-beam"></i> Thank you for shopping with us!</h4>
     </div>
 </div>
 

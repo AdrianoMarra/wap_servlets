@@ -51,4 +51,14 @@
         <url-pattern>/checkout</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>Thankyou</servlet-name>
+        <jsp-file>/pages/thankyou.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Thankyou</servlet-name>
+        <url-pattern>/thankyou</url-pattern>
+    </servlet-mapping>
+
 </web-app>
