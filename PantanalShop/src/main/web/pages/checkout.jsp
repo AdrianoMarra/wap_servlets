@@ -35,8 +35,9 @@
 </nav>
 <div class="container">
     <div class="card my-4">
-        <div class="card-body">
-            <h1 class="card-title">Checkout</h1>
+        <div class="card-body mb-5">
+            <h1 class="card-title d-inline-block">Checkout</h1>
+            <a href="/" class="btn btn-success float-right mt-2">Add more products!</a>
             <div class="dropdown-divider"></div>
 
             <!-- repeat this for each product -->
@@ -44,7 +45,7 @@
             <c:forEach items="${cart}" var="product">
                 <div class="media">
                     <img class="align-self-center mr-3 thumb" src="<c:url value="${product[3]}" />" alt="<c:out value="${product[0]}" />">
-                    <div class="media-body text-truncate my-4" >
+                    <div class="media-body text-truncate my-4">
                         <h5 class="mt-0"><c:out value="${product[0]}" /></h5>
                         <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                         <div class="text-right">

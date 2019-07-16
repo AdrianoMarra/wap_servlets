@@ -25,10 +25,6 @@ public class ProductDAO {
     }
 
     public List<Product> getProduct(MongoDatabase con, String target, String value){
-
-        Document test = new Document();
-        test.put("test", "test");
-
         BasicDBObject query = new BasicDBObject();
 
         query.put(target, value);

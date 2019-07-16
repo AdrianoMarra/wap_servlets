@@ -5,7 +5,6 @@ import com.mongodb.client.MongoDatabase;
 import com.pantanalshop.dao.ProductDAO;
 import com.pantanalshop.model.Product;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -71,7 +70,8 @@ public class ProductController extends HttpServlet {
 
         } else if(req.getParameter("checkout") != null){
             // Remove all products from cart
-            List<String[]> items = Arrays.asList();
+            List<String[]> items = (List<String[]>) session.getAttribute("cart");
+            items.clear();
             setAttributes(items, session);
             dao.removeAllFromCart(con, email);
             resp.sendRedirect("/thankyou");
@@ -92,12 +92,8 @@ public class ProductController extends HttpServlet {
 
         if(dao.addToCart(con, product, email) && email != null){
             List<String[]> items = (List<String[]>) session.getAttribute("cart");
-            System.out.println(items);
-            System.out.println(itemData);
-            System.out.println(session);
             items.add(itemData);
             setAttributes(items, session);
-
             resp.sendRedirect("/checkout");
             return;
         }
@@ -108,6 +104,7 @@ public class ProductController extends HttpServlet {
 
     private void setAttributes(List<String[]> items, HttpSession session){
         Double total = items.stream().mapToDouble(item -> Double.parseDouble(item[2]) * Double.parseDouble(item[6])).sum();
+
         session.setAttribute("cart", items);
         session.setAttribute("total", total);
         session.setAttribute("items", items.size());
