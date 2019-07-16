@@ -11,7 +11,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/8fd24b2ea7.js"></script>
         <script src="../resource/script/signupScript.js" crossorigin="anonymous"></script>
-        ${user != null ? null : "<script src='resource/script/checkCookies.js'></script>"}
 
     </head>
     <body class="bg-light">
@@ -21,7 +20,7 @@
         <div class="container my-4">
             <h2 class="mb-3">Registration</h2>
             <div class="card p-3">
-                <form class="form-horizontal" role="form" action="/API/register" method="post">
+                <form id="registration-form" class="form-horizontal" role="form" action="/API/register" method="post">
                         <div class="form-group">
                             <label for="fullName" class="col-sm-3 control-label">Full Name*</label>
                             <div class="col-sm-9">
@@ -42,7 +41,7 @@
                             <label for="password" class="col-sm-3 control-label">Password*</label>
                             <div class="col-sm-9">
                                 <input type="password" id="password" placeholder="Password" class="form-control"
-                                       name="password" required pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,})">
+                                       name="password" required pattern="([a-zA-Z]{4,}[0-9]{1,})">
                             </div>
                         </div>
                         <div class="form-group">
@@ -71,6 +70,13 @@
                             <input type="reset" class="btn btn-success" value="Clear">
                         </div>
                     </form>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader">
+            <div id="central">
+                <i class="fas fa-sync-alt"></i>
             </div>
         </div>
 
