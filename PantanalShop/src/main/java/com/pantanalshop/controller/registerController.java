@@ -54,9 +54,8 @@ public class registerController extends HttpServlet {
             return false;
         if(!user.matches("^.{3,50}$")) return false;
         if(!email.matches("^.+@\\w+\\.\\w+$")) return false;
-        if(!pass.matches("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,})")) return false;
+        if(!pass.matches("([a-zA-Z]{4,}[0-9]{1,})")) return false;
         if(!pass.equals(confirm)) return false;
-        if(!pass.matches(".{8,}")) return false;
 
         return true;
     }
