@@ -46,8 +46,6 @@
     </div>
 </nav>
 
-<div >  ${test} </div>
-
 <div class="container product-details">
     <div id="msg-error" class="card bg-danger text-light custom-msg my-4 ${param.E == 1 ? null : "dnone"}">
         <div class="card-body">
