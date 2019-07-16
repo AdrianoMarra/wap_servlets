@@ -26,13 +26,15 @@ public class ProductDAO {
 
     public List<Product> getProduct(MongoDatabase con, String target, String value){
 
+        Document test = new Document();
+        test.put("test", "test");
+
         BasicDBObject query = new BasicDBObject();
 
         query.put(target, value);
         MongoCollection<Document> coll = con.getCollection("products");
         MongoCursor cursor = coll.find(query).iterator();
         return computeList(cursor);
-
     }
 
     private List<Product> computeList(MongoCursor cursor){
@@ -80,7 +82,7 @@ public class ProductDAO {
             Document items = new Document();
             Document doc = new Document();
             doc.put("email", email);
-            products.forEach(item ->{
+            products.forEach(item -> {
                 items.put("cart", Arrays.asList(item));
                 push.put("$push", items);
                 coll.updateMany(doc, push);

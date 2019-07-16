@@ -289,4 +289,10 @@ img.card-img-top{
     color: #6c6d83;
 }
 
+footer.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 /*--End of Footer Style--*/

@@ -23,7 +23,7 @@
     <div class="" id="smallbar">
       <form class="form-inline my-2 my-lg-0 mr-auto ${cookie.user.value != null ? "dnone" : null}">
         <a data-toggle="modal" data-target="#cart-modal" class="btn btn-success my-2 my-sm-0 btn-sm" >
-          <i class="fas fa-shopping-cart"></i> Cart (${items > 0 ? items : 0})
+            <i class="fas fa-shopping-cart"></i> Cart (${items > 0 ? items : 0})
         </a> &nbsp;
         <a href="/signup" class="btn btn-success my-2 my-sm-0 btn-sm" >
           <i class="fas fa-sign-in-alt"></i> Signup
@@ -134,7 +134,7 @@
 
         <div class="dropdown-divider"></div>
         <div class="text-right">
-          <a href="/checkout" class="btn btn-danger checkoutbtn">Checkout</a>
+          <a href="/checkout" class="btn btn-success checkoutbtn">Checkout</a>
         </div>
       </div>
     </div>

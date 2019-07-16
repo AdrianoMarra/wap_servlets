@@ -5,6 +5,7 @@ import com.mongodb.client.MongoDatabase;
 import com.pantanalshop.dao.ProductDAO;
 import com.pantanalshop.model.Product;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -65,7 +66,7 @@ public class ProductController extends HttpServlet {
                                         .collect(Collectors.toList());
             setAttributes(newItems, session);
             dao.removeFromCart(con, newItems, email);
-            resp.sendRedirect("/checkout?E=0");
+            resp.sendRedirect("/checkout");
             return;
 
         } else if(req.getParameter("checkout") != null){
@@ -73,7 +74,7 @@ public class ProductController extends HttpServlet {
             List<String[]> items = Arrays.asList();
             setAttributes(items, session);
             dao.removeAllFromCart(con, email);
-            resp.sendRedirect("/checkout?E=10");
+            resp.sendRedirect("/thankyou");
             return;
         }
 
@@ -91,12 +92,17 @@ public class ProductController extends HttpServlet {
 
         if(dao.addToCart(con, product, email) && email != null){
             List<String[]> items = (List<String[]>) session.getAttribute("cart");
+            System.out.println(items);
+            System.out.println(itemData);
+            System.out.println(session);
             items.add(itemData);
             setAttributes(items, session);
 
-            resp.sendRedirect("/checkout?E=0");
+            resp.sendRedirect("/checkout");
             return;
         }
+
+
         resp.sendRedirect("/product?id=" + id + "&E=1");
     }
 
