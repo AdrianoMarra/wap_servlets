@@ -1,14 +1,10 @@
 (function(){
     "use strict";
 
-    function init() {
-        $(".add-to-card").submit(addToCart);
-    }
-
-
+    $(function () {
         function parseData(data) {
             $("#appendData").empty();
-            for(var i=0; i<data.length;i++){
+            for(var i=0; i<data.length;i++) {
                 let content =
                     `<div class="col-lg-4">
                         <div class="product pt-4">
@@ -64,17 +60,7 @@
             });
         $("#loader").fadeIn(300);
 
+    });
 
-
-    // let addToCart = function() {
-    //     console.log(this);
-    //     $.post('/API/product',
-    //         this.name : this
-    //         , (result) => {
-    //         console.log(result);
-    //     }, "json");
-    // }
-    //
-    // $(init);
 })();
 

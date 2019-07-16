@@ -91,6 +91,4 @@ public class LoginController extends HttpServlet {
 //        resp.addCookie(cookie);
         resp.sendRedirect("/");
     }
-
-
 }

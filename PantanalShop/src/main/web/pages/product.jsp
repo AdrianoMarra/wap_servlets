@@ -45,10 +45,13 @@
         </form>
     </div>
 </nav>
+
+<div >  ${test} </div>
+
 <div class="container product-details">
     <div id="msg-error" class="card bg-danger text-light custom-msg my-4 ${param.E == 1 ? null : "dnone"}">
         <div class="card-body">
-            <h4><i class="fas fa-times"></i> You must to be logged in to add products to cart!</h4>
+            <h5><i class="fas fa-times"></i> You must to be logged in to add products to cart!</h5>
         </div>
     </div>
     <div class="row" id="addClass">
@@ -117,7 +120,7 @@
     </div>
 </div>
 <!--Bottom Footer-->
-<footer class="bottom section-padding">
+<footer class="bottom section-padding fixed-bottom">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
