@@ -24,10 +24,19 @@ public class ProductDAO {
         return computeList(cursor);
     }
 
-    public List<Product> getProduct(MongoDatabase con, String target, String value){
+    public List<Product> getProduct(MongoDatabase con, String value){
         BasicDBObject query = new BasicDBObject();
 
-        query.put(target, value);
+        query.put("id", value);
+        MongoCollection<Document> coll = con.getCollection("products");
+        MongoCursor cursor = coll.find(query).iterator();
+        return computeList(cursor);
+    }
+
+    public List<Product> getProducts(MongoDatabase con, String key, String value){
+        BasicDBObject query = new BasicDBObject();
+
+        query.put(key, value);
         MongoCollection<Document> coll = con.getCollection("products");
         MongoCursor cursor = coll.find(query).iterator();
         return computeList(cursor);

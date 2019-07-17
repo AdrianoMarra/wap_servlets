@@ -39,10 +39,10 @@ public class ProductController extends HttpServlet {
         resp.setCharacterEncoding("UTF-8");
         MongoDatabase con = (MongoDatabase) sc.getAttribute("dbdatabase");
         if(req.getParameter("id") != null){
-            List<Product> products = dao.getProduct(con, "id", req.getParameter("id"));
+            List<Product> products = dao.getProduct(con, req.getParameter("id"));
             out.print(mapper.toJson(products));
         } else if(req.getParameter("type") != null){
-            List<Product> products = dao.getProduct(con, "type", req.getParameter("type"));
+            List<Product> products = dao.getProducts(con, "type", req.getParameter("type"));
             out.print(mapper.toJson(products));
         } else {
             List<Product> products = dao.getAllProducts(con);
@@ -105,8 +105,9 @@ public class ProductController extends HttpServlet {
     private void setAttributes(List<String[]> items, HttpSession session){
         Double total = items.stream().mapToDouble(item -> Double.parseDouble(item[2]) * Double.parseDouble(item[6])).sum();
 
+        String totalValue = String.format("%.2f", total);
         session.setAttribute("cart", items);
-        session.setAttribute("total", total);
+        session.setAttribute("total", totalValue);
         session.setAttribute("items", items.size());
     }
 

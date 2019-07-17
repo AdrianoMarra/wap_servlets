@@ -1,5 +1,5 @@
 (function () {
     $(function(){
-        setTimeout(() => $("#msg-success").slideUp(300), 1500);
+        setTimeout(() => $("#msg-success").slideUp(300), 3000);
     })
 })();

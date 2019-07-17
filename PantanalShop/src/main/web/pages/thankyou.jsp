@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/8fd24b2ea7.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-dark justify-content-between">
+    <nav class="navbar navbar-light justify-content-between">
     <a class="navbar-brand" href="/">Pantanal Shop</a>
     <div class="" id="smallbar">
         <form class="form-inline my-2 my-lg-0 mr-auto ${cookie.user.value != null ? "dnone" : null}">

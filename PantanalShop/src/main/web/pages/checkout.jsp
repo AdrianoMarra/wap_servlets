@@ -16,7 +16,7 @@
     <script src="../resource/script/checkoutScript.js"></script>
 </head>
 <body class="bg-light">
-<nav class="navbar navbar-light bg-dark justify-content-between">
+<nav class="navbar navbar-light justify-content-between">
     <a class="navbar-brand" href="/">Pantanal Shop</a>
     <div class="" id="smallbar">
         <form class="form-inline my-2 my-lg-0 mr-auto">
@@ -47,7 +47,6 @@
                     <img class="align-self-center mr-3 thumb" src="<c:url value="${product[3]}" />" alt="<c:out value="${product[0]}" />">
                     <div class="media-body text-truncate my-4">
                         <h5 class="mt-0"><c:out value="${product[0]}" /></h5>
-                        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                         <div class="text-right">
                             <form action="/API/product" method="post">
                                 <input type="hidden" name="id" value="${product[7]}">
@@ -93,7 +92,7 @@
 
                         <!-- repeat this for each product -->
                         <c:forEach items="${cart}" var="product">
-                            <div id="cartshow" class="row">
+                            <div class="row cartshow">
                                 <div class="col-sm-3 text-right">
                                     <img src="<c:url value="${product[3]}"  />"  alt="<c:out value="${product[0]}" />">
                                 </div>

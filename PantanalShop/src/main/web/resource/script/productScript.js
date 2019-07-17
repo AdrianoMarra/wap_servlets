@@ -7,10 +7,10 @@
             let url = new URL(urlpath);
             let id = url.searchParams.get("id");
             console.log(id);
-            $.get('/API/product', {"id": id}, showImage, "json");
+            $.get('/API/product', {"id": id}, showProduct, "json");
         }
 
-        function showImage(data) {
+        function showProduct(data) {
 
             let content = `
                              <div class="col-8 card">
@@ -27,6 +27,7 @@
                                             <p class="card-text">
                                                  ${data[0].description}
                                             </p>
+                                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +58,7 @@
         }
 
         initialize();
-        setTimeout(() => $("#msg-error").slideUp(300), 1500);
+        setTimeout(() => $("#msg-error").slideUp(300), 3000);
     });
 
 })();

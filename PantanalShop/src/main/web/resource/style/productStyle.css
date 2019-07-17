@@ -1,33 +1,13 @@
-.col-xs-5{
-    border: 0px solid gray;
-}
-
-h3{
+h3 {
     margin-top:0px !important;
 }
 
-.section{
-    padding-bottom:20px;
+.section {
+    padding-bottom: 20px;
 }
 
-.description{
-    width: 100%;
-    border-top: 1px solid silver
-}
-.description>p{
-    padding:15px;
-}
 .btnclass>div{
     display: inline;
-}
-.aside{
-    display: inline-block;
-    margin-left: 5px;
-}
-.aside img{
-    float: left;
-    height: 400px;
-    width: 1000px;
 }
 
 .card-body{

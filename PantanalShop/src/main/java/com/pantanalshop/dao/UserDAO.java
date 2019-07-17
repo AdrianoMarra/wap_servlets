@@ -16,11 +16,11 @@ public class UserDAO {
 
     Gson mapper = new Gson();
 
-    public User authenticate(MongoDatabase con, String login){
+    public User authenticate(MongoDatabase con, String email){
 
         User user;
         BasicDBObject query = new BasicDBObject();
-        query.put("email", login);
+        query.put("email", email);
         MongoCollection<Document> coll = con.getCollection("users");
         MongoCursor cursor = coll.find(query).iterator();
 
