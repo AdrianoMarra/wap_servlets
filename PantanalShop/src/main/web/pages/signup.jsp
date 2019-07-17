@@ -14,7 +14,7 @@
 
     </head>
     <body class="bg-light">
-        <nav class="navbar navbar-light bg-dark justify-content-between">
+        <nav class="navbar navbar-light justify-content-between">
             <a class="navbar-brand" href="/">Pantanal Shop</a>
         </nav>
         <div class="container my-4">

@@ -17,7 +17,7 @@
     ${user != null ? null : "<script src='resource/script/checkCookies.js'></script>"}
 </head>
 <body class="bg-light">
-<nav class="navbar navbar-light bg-dark justify-content-between">
+<nav class="navbar navbar-light justify-content-between">
     <a class="navbar-brand" href="/">Pantanal Shop</a>
     <div class="" id="smallbar">
         <form class="form-inline my-2 my-lg-0 mr-auto ${cookie.user.value != null ? "dnone" : null}">
@@ -46,10 +46,11 @@
     </div>
 </nav>
 
+
 <div class="container product-details">
     <div id="msg-error" class="card bg-danger text-light custom-msg my-4 ${param.E == 1 ? null : "dnone"}">
         <div class="card-body">
-            <h5><i class="fas fa-times"></i> You must to be logged in to add products to cart!</h5>
+            <h5>Please login before adding products to cart.</h5>
         </div>
     </div>
     <div class="row" id="addClass">
@@ -92,7 +93,7 @@
 
             <!-- repeat this for each product -->
             <c:forEach items="${cart}" var="product">
-                <div id="cartshow" class="row">
+                <div class="row cartshow">
                     <div class="col-sm-3 text-right">
                         <img src="<c:url value="${product[3]}"  />"  alt="<c:out value="${product[0]}" />">
                     </div>

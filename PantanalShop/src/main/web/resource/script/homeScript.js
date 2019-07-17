@@ -49,8 +49,8 @@
         });
 
         // Dismiss messages
-        setTimeout(() => $("#msg-success").slideUp(300), 1500);
-        setTimeout(() => $("#msg-error").slideUp(300), 1500);
+        setTimeout(() => $("#msg-success").slideUp(300), 3000);
+        setTimeout(() => $("#msg-error").slideUp(300), 3000);
 
         // Initial Products loader
         $.get('/API/product', parseData, "json")
